@@ -10,6 +10,7 @@ export const Container = styled.header`
     justify-content: space-between;
     align-items: center;
     background: #180f08e5;
+    /* margin-bottom: 30px; */
     box-shadow: 0px 10px 17px -3px rgba(0, 0, 0, 0.75);
     border-bottom: 4px dashed #f0c171dd;
 
