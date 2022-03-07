@@ -6,10 +6,10 @@ const Header = () => (
     <Container>
         <h1>ONE PIECE</h1>
         <nav>
-            <div>
+            <Link to="/">
                 <GiPirateFlag />
-                <Link>Cadeia</Link>
-            </div>
+                CADEIA
+            </Link>
         </nav>
     </Container>
 )
