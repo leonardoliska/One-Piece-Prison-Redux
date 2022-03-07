@@ -1,10 +1,10 @@
 import styled from "styled-components"
 
 const Container = styled.div`
-    border: none !important;
+    border: none;
     display: flex;
     flex-direction: column;
-    height: auto !important;
+    height: auto;
 
     img {
         height: 300px;

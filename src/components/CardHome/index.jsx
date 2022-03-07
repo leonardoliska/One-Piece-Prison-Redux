@@ -1,10 +1,10 @@
 import Container from "./styles"
 
-const Card = ({ img }) => (
+const CardHome = ({ img }) => (
     <Container>
         <button>Capturar</button>
         <img src={img} alt="" />
     </Container>
 )
 
-export default Card
+export default CardHome

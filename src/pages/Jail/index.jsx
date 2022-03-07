@@ -1,5 +1,11 @@
+import { Prisoners } from "../../components/Prisoners"
+
 const Jail = () => {
-    return <div></div>
+    return (
+        <>
+            <Prisoners></Prisoners>
+        </>
+    )
 }
 
 export default Jail
