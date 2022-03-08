@@ -6,4 +6,6 @@ export const changeCapturedThunk = (pirateId, captureState) => (dispatch, getSta
     const selectedPirate = pirates.find((pirate) => pirate.id === pirateId)
 
     dispatch(changeCaptured(selectedPirate.id, captureState))
+
+    localStorage.setItem("@onepiece: pirates", JSON.stringify(pirates))
 }

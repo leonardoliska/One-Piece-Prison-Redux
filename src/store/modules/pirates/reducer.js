@@ -2,7 +2,9 @@ import { CHANGE_CAPTURED } from "./actionTypes"
 
 import defaultPirates from "./defaultPirates"
 
-const piratesReducer = (state = defaultPirates, action) => {
+const initialState = JSON.parse(localStorage.getItem("@onepiece: pirates")) || defaultPirates
+
+const piratesReducer = (state = initialState, action) => {
     switch (action.type) {
         case CHANGE_CAPTURED:
             const selectedPirateId = action.selectedPirateId
