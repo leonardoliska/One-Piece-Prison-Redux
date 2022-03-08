@@ -1,7 +1,13 @@
 import WantedList from "../../components/WantedList"
+import Header from "../../components/Header"
 
 const Home = () => {
-    return <WantedList></WantedList>
+    return (
+        <>
+            <Header url={"/jail"} />
+            <WantedList></WantedList>
+        </>
+    )
 }
 
 export default Home
