@@ -3,16 +3,21 @@ import styled from "styled-components"
 import { Link as ReactRouterLink } from "react-router-dom"
 
 export const Container = styled.header`
-    height: 100px;
-    padding: 0 5%;
+    padding: 20px 5%;
+    gap: 18px;
     color: #f0c171;
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
     align-items: center;
     background: #180f08e5;
     /* margin-bottom: 30px; */
     box-shadow: 0px 10px 17px -3px rgba(0, 0, 0, 0.75);
     border-bottom: 4px dashed #f0c171dd;
+
+    @media (min-width: 500px) {
+        flex-direction: row;
+    }
 
     h1 {
         margin: 0;
