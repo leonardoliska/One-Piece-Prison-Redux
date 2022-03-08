@@ -5,7 +5,7 @@ const Home = () => {
     return (
         <>
             <Header url={"/jail"} />
-            <WantedList></WantedList>
+            <WantedList />
         </>
     )
 }

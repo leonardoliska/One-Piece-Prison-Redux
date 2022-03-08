@@ -1,15 +1,18 @@
 import Container from "./styles"
 
 import CardHome from "../../components/CardHome"
+import { useSelector } from "react-redux"
 
-import image1 from "../../assets/img/Brook's_Concert_Wanted_Poster.png"
-import image2 from "../../assets/img/Jinbe's_Current_Wanted_Poster.png"
+const WantedList = () => {
+    const { pirates } = useSelector((state) => state)
 
-const WantedList = () => (
-    <Container>
-        <CardHome img={image1} />
-        <CardHome img={image2} />
-    </Container>
-)
+    return (
+        <Container>
+            {pirates.map((pirate) => (
+                <CardHome key={pirate.id} pirate={pirate} />
+            ))}
+        </Container>
+    )
+}
 
 export default WantedList

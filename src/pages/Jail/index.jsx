@@ -5,7 +5,7 @@ const Jail = () => {
     return (
         <>
             <Header url={"/"} />
-            <Prisoners></Prisoners>
+            <Prisoners />
         </>
     )
 }
