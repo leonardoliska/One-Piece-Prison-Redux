@@ -1,6 +1,7 @@
-import { CAPTURE } from "./actionTypes"
+import { CHANGE_CAPTURED } from "./actionTypes"
 
-export const capture = (selectedPirateId) => ({
-    type: CAPTURE,
+export const changeCaptured = (selectedPirateId, captureState) => ({
+    type: CHANGE_CAPTURED,
     selectedPirateId,
+    captureState,
 })

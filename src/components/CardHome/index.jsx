@@ -2,13 +2,15 @@ import Container from "./styles"
 
 import { useDispatch } from "react-redux"
 
-import { captureThunk } from "../../store/modules/pirates/thunk"
+import { changeCapturedThunk } from "../../store/modules/pirates/thunk"
 
 const CardHome = ({ pirate }) => {
     const dispatch = useDispatch()
 
     const handleClick = () => {
-        dispatch(captureThunk(pirate.id))
+        const captureState = true
+
+        dispatch(changeCapturedThunk(pirate.id, captureState))
     }
 
     return (

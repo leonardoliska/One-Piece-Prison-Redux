@@ -22,7 +22,7 @@ export const Prisoners = () => {
             <div />
             <main>
                 {capturedPirates.map((pirate) => (
-                    <CardJail pirate={pirate} />
+                    <CardJail key={pirate.id} pirate={pirate} />
                 ))}
             </main>
         </Container>

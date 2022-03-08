@@ -52,6 +52,7 @@ const Container = styled.div`
         padding: 35px;
         border: 1px solid #52493f;
         box-shadow: 0px 0px 17px 0px #f0c17118;
+        position: relative;
 
         h3 {
             color: #f0c171;
@@ -69,6 +70,24 @@ const Container = styled.div`
             font-variant: small-caps;
             letter-spacing: 2px;
             text-shadow: 2px 2px 1px #f0c17180;
+        }
+
+        svg {
+            position: absolute;
+            right: 25px;
+            top: 25px;
+            height: 40px;
+            width: 40px;
+            border-radius: 5px;
+            background: #101006dd;
+            color: #f0c171;
+            cursor: pointer;
+            padding: 5px;
+            border: 1px solid transparent;
+
+            :hover {
+                border-color: #f0c171;
+            }
         }
     }
 `

@@ -1,1 +1,1 @@
-export const CAPTURE = "CAPTURE"
+export const CHANGE_CAPTURED = "CHANGE_CAPTURED"

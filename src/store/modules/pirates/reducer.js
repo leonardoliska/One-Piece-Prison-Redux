@@ -1,15 +1,15 @@
-import { CAPTURE } from "./actionTypes"
+import { CHANGE_CAPTURED } from "./actionTypes"
 
 import defaultPirates from "./defaultPirates"
 
 const piratesReducer = (state = defaultPirates, action) => {
     switch (action.type) {
-        case CAPTURE:
+        case CHANGE_CAPTURED:
             const selectedPirateId = action.selectedPirateId
 
             const newPiratesList = state.map((pirate) => {
                 if (pirate.id === selectedPirateId) {
-                    pirate.isCaptured = true
+                    pirate.isCaptured = action.captureState
                 }
                 return pirate
             })
