@@ -1,6 +1,8 @@
 import styled from "styled-components"
 
 export const Container = styled.div`
+    padding: 0 5%;
+
     aside {
         margin: 30px auto 0;
         background: #180f08e5;
@@ -52,6 +54,30 @@ export const Container = styled.div`
             display: flex;
             flex-direction: column;
             gap: 10px;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        display: flex;
+        margin-top: 30px;
+
+        aside {
+            width: calc(30% - 30px);
+            order: 3;
+            margin: 0;
+            flex-direction: column;
+            justify-content: space-evenly;
+            text-align: center;
+        }
+        aside + div {
+            order: 2;
+            width: 30px;
+            border: none;
+        }
+        main {
+            width: 70%;
+            order: 1;
+            margin: 0;
         }
     }
 `
