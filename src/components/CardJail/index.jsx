@@ -6,7 +6,7 @@ const CardJail = ({ pirate }) => (
         <div></div>
         <div>
             <h3>{pirate.name}</h3>
-            <p>฿ {pirate.reward}</p>
+            <p>฿ {new Intl.NumberFormat("de-DE").format(pirate.reward)}</p>
         </div>
     </Container>
 )

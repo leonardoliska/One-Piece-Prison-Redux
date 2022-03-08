@@ -17,6 +17,7 @@ export const Container = styled.div`
         column-gap: 10%;
         row-gap: 10px;
         flex-wrap: wrap;
+        max-height: 300px;
 
         h2 {
             font-size: 35px;

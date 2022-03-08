@@ -8,6 +8,5 @@ export const captureThunk = (pirateId) => (dispatch, getState) => {
     if (!selectedPirate.isCaptured) {
         dispatch(capture(selectedPirate.id))
     } else {
-        console.log("Pirata já está capturado")
     }
 }

@@ -2,23 +2,28 @@ import { Container, PrisonersContainer, RewardContainer } from "./styles"
 
 import CardJail from "../CardJail"
 
-const pirate = {
-    img: require("../../assets/img/Monkey_D._Luffy's_Current_Wanted_Poster.png"),
-    name: "luffy",
-    reward: "3000000",
-}
+import { useSelector } from "react-redux"
 
 export const Prisoners = () => {
+    const { pirates } = useSelector((state) => state)
+
+    const capturedPirates = pirates.filter((pirate) => pirate.isCaptured)
+
+    const totalReward = new Intl.NumberFormat("de-DE").format(
+        capturedPirates.reduce((total, current) => total + current.reward, 0)
+    )
+
     return (
         <Container>
             <aside>
                 <h2>Recompensa</h2>
-                <span>฿ 10000</span>
+                <span>฿ {totalReward}</span>
             </aside>
             <div />
             <main>
-                <CardJail pirate={pirate} />
-                <CardJail pirate={pirate} />
+                {capturedPirates.map((pirate) => (
+                    <CardJail pirate={pirate} />
+                ))}
             </main>
         </Container>
     )

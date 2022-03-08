@@ -6,6 +6,8 @@ const Container = styled.div`
     flex-direction: column;
     height: auto;
 
+    ${({ isCaptured }) => isCaptured && "{filter: saturate(0)}"}
+
     img {
         height: 300px;
         border-radius: 8px 8px 0 0;
@@ -16,8 +18,7 @@ const Container = styled.div`
     }
 
     button:hover + img {
-        border: 2px solid #f0c171dd;
-        border-bottom: 0;
+        ${({ isCaptured }) => !isCaptured && "{border: 2px solid #f0c171dd;border-bottom: 0;}"}
     }
 
     button {
@@ -31,9 +32,7 @@ const Container = styled.div`
         transition: 0.2s;
 
         :hover {
-            color: #180f08;
-            background: #f0c171dd;
-            cursor: pointer;
+            ${({ isCaptured }) => !isCaptured && "{color: #180f08;background: #f0c171dd;cursor: pointer;}"}
         }
     }
 `
