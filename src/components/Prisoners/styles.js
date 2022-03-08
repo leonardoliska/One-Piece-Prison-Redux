@@ -17,14 +17,15 @@ export const Container = styled.div`
         column-gap: 10%;
         row-gap: 10px;
         flex-wrap: wrap;
+        align-items: center;
         max-height: 300px;
 
         h2 {
-            font-size: 35px;
+            font-size: 30px;
         }
 
         span {
-            font-size: 30px;
+            font-size: 23px;
             font-weight: bold;
             font-style: italic;
         }
@@ -78,7 +79,7 @@ export const Container = styled.div`
         main {
             width: 70%;
             order: 1;
-            margin: 0;
+            margin: 0 0 30px 0;
         }
     }
 `
