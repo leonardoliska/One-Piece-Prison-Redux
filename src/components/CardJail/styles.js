@@ -16,6 +16,8 @@ const Container = styled.div`
         order: -1;
         border-bottom: 0;
         transition: 0.2s;
+        object-fit: contain;
+        height: 300px;
 
         @media (min-width: 768px) {
             height: 200px;
@@ -49,14 +51,15 @@ const Container = styled.div`
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 35px;
+        padding: 20px;
+        gap: 10px;
         border: 1px solid #52493f;
         box-shadow: 0px 0px 17px 0px #f0c17118;
         position: relative;
 
         h3 {
             color: #f0c171;
-            font-size: 50px;
+            font-size: 35px;
             font-weight: bold;
             font-variant: small-caps;
             letter-spacing: 2px;
@@ -64,7 +67,7 @@ const Container = styled.div`
         }
 
         p {
-            font-size: 32px;
+            font-size: 20px;
             color: #f0c171;
             font-weight: bold;
             font-variant: small-caps;
@@ -74,10 +77,10 @@ const Container = styled.div`
 
         svg {
             position: absolute;
-            right: 25px;
-            top: 25px;
-            height: 40px;
-            width: 40px;
+            right: 10px;
+            top: 10px;
+            height: 35px;
+            width: 35px;
             border-radius: 5px;
             background: #101006dd;
             color: #f0c171;
@@ -87,6 +90,23 @@ const Container = styled.div`
 
             :hover {
                 border-color: #f0c171;
+            }
+        }
+
+        @media (min-width: 768px) {
+            padding: 35px;
+
+            p {
+                font-size: 32px;
+            }
+            h3 {
+                font-size: 50px;
+            }
+            svg {
+                height: 40px;
+                width: 40px;
+                right: 25px;
+                top: 25px;
             }
         }
     }
