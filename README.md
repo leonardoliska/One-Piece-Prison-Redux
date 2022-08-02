@@ -19,6 +19,7 @@ Aproveitei a oportunidade do tema livre e criei o design do site baseado em One 
 
 ### Tecnologias
 
+
 - React
 - Redux
 - Styled-components
